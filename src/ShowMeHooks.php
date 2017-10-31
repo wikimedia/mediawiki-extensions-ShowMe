@@ -36,6 +36,13 @@ class ShowMeHooks {
 			$options[trim( $bits[0] )] = trim( $bits[1] );
 		}
 
+		$validTypes = [ 'dropdown', 'ul' ];
+		if ( isset( $args['type'] ) && in_array( $args['type'], $validTypes ) ) {
+			$type = $args['type'];
+		} else {
+			$type = 'dropdown';
+		}
+
 		// If the user supplied an ID, use it. Otherwise, generate one.
 		if ( isset( $args['name'] ) ) {
 			$name = $args['name'];
@@ -43,10 +50,10 @@ class ShowMeHooks {
 			static $num = 0;
 			// Add a num to the HTML ID in case there is more than one ShowMe field on this page.
 			// Iterate after getting num.
-			$name = 'showme-dropdown' . '-' . $num++;
+			$name = "showme-$type" . '-' . $num++;
 		}
 
-		$showMe = new ShowMe( 'dropdown', $name, $options, $parser->getOutput() );
+		$showMe = new ShowMe( $type, $name, $options, $parser->getOutput() );
 		return $showMe->getHTML();
 	}
 }

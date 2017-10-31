@@ -1,6 +1,6 @@
 {
 	"name": "ShowMe",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"author": [
 		"Ike Hecht"
 	],
@@ -27,14 +27,13 @@
 	},
 	"ResourceModules": {
 		"ext.showMe": {
-			"scripts": [
-				"modules/ext.showMe.js"
-			]
+			"scripts": "ext.showMe.js",
+			"styles": "ext.showMe.css"
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "ShowMe"
+		"localBasePath": "modules",
+		"remoteExtPath": "ShowMe/modules"
 	},
 	"manifest_version": 1
 }
