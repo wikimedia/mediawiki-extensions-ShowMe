@@ -9,7 +9,8 @@ module.exports = function ( grunt ) {
 			all: [
 				'*.js',
 				'**/*.js',
-				'!node_modules/**'
+				'!node_modules/**',
+				'!vendor/**'
 			]
 		},
 		banana: {
