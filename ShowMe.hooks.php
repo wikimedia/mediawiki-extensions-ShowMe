@@ -10,7 +10,7 @@ class ShowMeHooks {
 
 	/**
 	 *
-	 * @param Parser $parser
+	 * @param Parser &$parser
 	 * @return bool
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
