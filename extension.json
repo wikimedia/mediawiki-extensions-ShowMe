@@ -29,8 +29,7 @@
 		"ext.showMe": {
 			"scripts": [
 				"modules/ext.showMe.js"
-			],
-			"position": "bottom"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
