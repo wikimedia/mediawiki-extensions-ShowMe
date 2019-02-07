@@ -7,7 +7,7 @@ class ShowMe {
 	private $type;
 	private $name;
 	private $options;
-	static protected $num = 0;
+	protected static $num = 0;
 
 	/**
 	 *
