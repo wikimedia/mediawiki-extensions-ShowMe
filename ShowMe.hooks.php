@@ -9,17 +9,13 @@
 class ShowMeHooks {
 
 	/**
-	 *
 	 * @param Parser &$parser
-	 * @return bool
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
 		$parser->setHook( 'showme', [ __CLASS__, 'showMeRender' ] );
-		return true;
 	}
 
 	/**
-	 *
 	 * @staticvar int $num
 	 * @param string $input
 	 * @param array $args
@@ -28,17 +24,17 @@ class ShowMeHooks {
 	 * @return string Output HTML
 	 */
 	public static function showMeRender( $input, array $args, Parser $parser, PPFrame $frame ) {
-		$parser->getOutput()->addModuleScripts( 'ext.showMe' );
+		$parser->getOutput()->addModules( 'ext.showMe' );
 
 		$options = [];
-		$lines = StringUtils::explode( "\n", $input );
+		$lines = explode( "\n", $input );
 		foreach ( $lines as $line ) {
-			$bits = StringUtils::explodeMarkup( '|', $line );
-			if ( count( $bits ) < 2 ) {
+			$bits = explode( '|', $line, 3 );
+			if ( !isset( $bits[1] ) ) {
 				continue;
 				// throw error instead?
 			}
-			$options[$bits[0]] = $bits[1];
+			$options[trim( $bits[0] )] = trim( $bits[1] );
 		}
 
 		// If the user supplied an ID, use it. Otherwise, generate one.

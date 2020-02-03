@@ -1,6 +1,5 @@
 <?php
 /**
- *
  * @author Ike Hecht <tosfos@yahoo.com>
  */
 class ShowMe {
@@ -10,10 +9,9 @@ class ShowMe {
 	protected static $num = 0;
 
 	/**
-	 *
 	 * @param string $type The type of input field, currently must be 'dropdown'
 	 * @param string $name The name and ID to be assigned to the input field
-	 * @param array $options Use the form label => value
+	 * @param string[] $options Use the form label => value
 	 * @param ParserOutput $out
 	 */
 	function __construct( $type, $name, array $options, ParserOutput $out ) {
