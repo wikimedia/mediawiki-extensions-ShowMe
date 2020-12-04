@@ -14,7 +14,7 @@ class ShowMe {
 	 * @param string[] $options Use the form label => value
 	 * @param ParserOutput $out
 	 */
-	function __construct( $type, $name, array $options, ParserOutput $out ) {
+	public function __construct( $type, $name, array $options, ParserOutput $out ) {
 		$this->type = $type;
 		$this->name = $name;
 		$this->options = $options;
@@ -36,7 +36,8 @@ class ShowMe {
 			return $this->getDropdownHTML();
 		}
 		// invalid type
-		return ''; // Throw error?
+		// Throw error?
+		return '';
 	}
 
 	/**

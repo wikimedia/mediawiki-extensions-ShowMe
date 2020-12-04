@@ -16,7 +16,6 @@ class ShowMeHooks {
 	}
 
 	/**
-	 * @staticvar int $num
 	 * @param string $input
 	 * @param array $args
 	 * @param Parser $parser

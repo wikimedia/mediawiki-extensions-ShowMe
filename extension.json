@@ -12,8 +12,8 @@
 		"MediaWiki": ">= 1.25.0"
 	},
 	"AutoloadClasses": {
-		"ShowMe": "ShowMe.class.php",
-		"ShowMeHooks": "ShowMe.hooks.php"
+		"ShowMe": "src/ShowMe.php",
+		"ShowMeHooks": "src/ShowMeHooks.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
