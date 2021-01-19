@@ -3,10 +3,15 @@
  * @author Ike Hecht <tosfos@yahoo.com>
  */
 class ShowMe {
+
+	/** @var string */
 	private $type;
+
+	/** @var string */
 	private $name;
+
+	/** @var string[] */
 	private $options;
-	protected static $num = 0;
 
 	/**
 	 * @param string $type The type of input field, currently may be 'dropdown' or 'ul'
