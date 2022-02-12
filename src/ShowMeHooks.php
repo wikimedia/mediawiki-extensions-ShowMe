@@ -23,7 +23,7 @@ class ShowMeHooks {
 	 * @return string Output HTML
 	 */
 	public static function showMeRender( $input, array $args, Parser $parser, PPFrame $frame ) {
-		$parser->getOutput()->addModules( 'ext.showMe' );
+		$parser->getOutput()->addModules( [ 'ext.showMe' ] );
 
 		$options = [];
 		$lines = explode( "\n", $input );
