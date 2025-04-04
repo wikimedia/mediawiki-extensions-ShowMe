@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Html\Html;
+
 /**
  * @author Ike Hecht <tosfos@yahoo.com>
  */
