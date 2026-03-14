@@ -29,9 +29,9 @@ class ShowMe {
 
 		// Add this $name to the array of ShowMe field IDs that exist on this page
 		if ( $type == 'dropdown' ) {
-			$this->addVar( 'wgShowMeDropdownIDs', $name, $out );
+			$out->setJsConfigVar( 'wgShowMeDropdownIDs', $name );
 		} elseif ( $type == 'ul' ) {
-			$this->addVar( 'wgShowMeUnorderedListIDs', $name, $out );
+			$out->setJsConfigVar( 'wgShowMeUnorderedListIDs', $name );
 		}
 	}
 
@@ -78,18 +78,5 @@ class ShowMe {
 		$html .= Html::closeElement( 'ul' );
 
 		return $html;
-	}
-
-	/**
-	 * Add the name of an element to the JS vars
-	 *
-	 * @param string $varName
-	 * @param string $name
-	 * @param ParserOutput $out
-	 */
-	private function addVar( $varName, $name, ParserOutput $out ) {
-		$configVars = $out->getJsConfigVars();
-		$configVars[$varName][] = $name;
-		$out->addJsConfigVars( $varName, $configVars[$varName] );
 	}
 }
