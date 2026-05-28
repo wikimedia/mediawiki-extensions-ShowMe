@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Siebrand"
 		]
 	},
-	"showme-desc": "Toont of verbergt geselecteerde elementen op de pagina"
+	"showme-desc": "Geselecteerde elementen op de pagina weergeven of verbergen"
 }
